@@ -1,0 +1,2 @@
+use venv\Scripts\activate in terminal to activate virtual env with streamlit
+then do " streamlit run Home.py " to run Home.py via streamlit
