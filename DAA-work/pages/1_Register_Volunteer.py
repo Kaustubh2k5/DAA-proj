@@ -4,7 +4,7 @@ from geopy.geocoders import Nominatim
 import os
 
 st.set_page_config(page_title="Register Volunteer", layout="centered")
-st.title("🚗 Register Volunteer")
+st.title("🙋🏻‍♂️ Register Volunteer")
 
 # File path for volunteers data
 volunteer_file = "volunteers.csv"

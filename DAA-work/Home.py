@@ -6,74 +6,53 @@ st.set_page_config(page_title="Food Distribution Optimizer", layout="wide")
 
 # 🔧 Optional: Background image
 def set_background(image_path):
-    with open(image_path, "rb") as image_file:
-        encoded = base64.b64encode(image_file.read()).decode()
-    bg_css = f"""
+    with open(image_path, "rb") as file:
+        encoded = base64.b64encode(file.read()).decode()
+    page_bg = f"""
     <style>
     .stApp {{
         background-image: url("data:image/png;base64,{encoded}");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        color: #f5f5f5;
+        color: white ;
     }}
     .main-container {{
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(255, 255, 255, 0.85);
         border-radius: 1.5rem;
-        padding: 3rem;
+        padding: 3.5rem 3rem;
         margin: 2rem auto;
         max-width: 1000px;
-        box-shadow: 0 4px 25px rgba(0,0,0,0.4);
-        animation: fadeIn 1.2s ease-in-out;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     }}
     h1 {{
         text-align: center;
-        color: #90ee90;
+        color: #1b3b1f;
         font-size: 3rem;
         font-weight: bold;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        text-shadow: 1px 1px 2px #ffffff;
     }}
-    h2, h3 {{
-        color: #ffffff;
-        font-weight: bold;
-        margin-top: 2rem;
+    h3 {{
+        color: #184d47;
+        margin-top: 1rem;
     }}
     ul {{
         margin-left: 1rem;
         line-height: 1.6;
     }}
-    .tagline {{
-        font-size: 1.2rem;
-        color: #a5d6a7;
-        text-align: center;
-        margin-bottom: 2rem;
-        font-weight: 500;
-    }}
-    .highlight {{
-        background: rgba(255, 255, 255, 0.05);
-        border-left: 4px solid #66bb6a;
-        padding: 1rem 1.5rem;
-        border-radius: 0.5rem;
-        margin: 1rem 0;
-        color: #eeeeee;
-        box-shadow: 0 1px 6px rgba(0,0,0,0.3);
-        font-size: 1rem;
-    }}
-    @keyframes fadeIn {{
-        from {{ opacity: 0; transform: translateY(20px); }}
-        to {{ opacity: 1; transform: translateY(0); }}
+    p, li {{
+        color: white;
+        font-size: 1.05rem;
     }}
     </style>
     """
-    st.markdown(bg_css, unsafe_allow_html=True)
+    st.markdown(page_bg, unsafe_allow_html=True)
 
-# Set background image (replace with your image filename)
+set_background("your_background.jpg") 
 
 # 🧭 Main Content
 st.markdown("<h1>🚚 Smart Food Routing System</h1>", unsafe_allow_html=True)
 st.markdown("<div class='tagline'>Empowering Communities Through Smarter Food Delivery</div>", unsafe_allow_html=True)
-
-st.markdown("<div class='main-container'>", unsafe_allow_html=True)
 
 st.markdown("""
 <h2>⚠️ The Challenge</h2>
