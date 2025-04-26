@@ -1,0 +1,14 @@
+# Python package dependencies for Food Distribution Optimizer
+
+streamlit
+pandas
+numpy
+folium
+plotly
+scikit-learn
+python-dotenv
+requests
+geopy
+matplotlib
+seaborn
+googlemaps
